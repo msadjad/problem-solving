@@ -8,10 +8,10 @@ function groupAnagrams(strs: string[]): string[][] {
         groups.set(hash, group);
     } 
 
-    const result = [];
+    const result: string[][] = [];
 
     for(const [hash, groupIndexes] of groups) {
-        const group = [];
+        const group: string[] = [];
         for(let i=0 ; i<groupIndexes.length ; i++) {
             group.push(strs[groupIndexes[i]])
         }
